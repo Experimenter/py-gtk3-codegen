@@ -29,7 +29,7 @@ class gtk_codegen():
         
         
         # Init code for py file 
-        initpy = 'from gi.repository import Gtk;'
+        initpy = "import gi; gi.require_version('Gtk', '3.0'); from gi.repository import Gtk;"
         self.write_block(initpy,fileobj)
         
         # Fill template by Generating Classes for each Toplevel object
@@ -91,7 +91,7 @@ class gtk_codegen():
 import sys
 codegen = gtk_codegen()
 if len(sys.argv)<=1:
-    print "usage: gtkbuilder_template_generator glade_file.xml [template.py]"
+    print ("usage: py-gtk3-codegen glade_file.xml [template.py]")
 elif len(sys.argv)==2:
     #create file abc.py from abc.xml/abc.glade if name of py file is not provided
     codegen.create_template(sys.argv[1].split('.')[0]+'.py',sys.argv[1])
