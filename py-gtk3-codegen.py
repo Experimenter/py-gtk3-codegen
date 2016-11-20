@@ -17,7 +17,7 @@ class gtk_codegen():
              if object.getAttribute('class') in \
              ['GtkEntry','GtkTextView','GtkComboBox','GtkComboBoxEntry','GtkProgressBar',\
               'GtkCheckbox','GtkRadioButton','GtkSpinButton','GtkCalendar','GtkToolBar',\
-              'GtkStatusbar','GtkFileChooserButton','GtkFontButton','GtkHScale','GtkVScale']]
+              'GtkStatusbar','GtkFileChooserButton','GtkFontButton','GtkHScale','GtkVScale','GtkTreeView']]
         
         return tag_collection
     
